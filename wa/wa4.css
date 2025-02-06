@@ -1,0 +1,132 @@
+/*General page styles*/
+body {
+    margin: 0;
+  }
+  
+html {
+    font-family: 'Helvetica neue', Arial, 'sans serif';
+    font-size: 10px;
+    background-color: #ccc;
+  }
+  
+
+/*Card container styles*/
+.card {
+    width: 35em;
+    height: 22em;
+    margin: 5em auto;
+    background-color: red;
+    border: 0.2em solid black;
+    border-radius: 1.5em;
+  }
+
+
+/*Header and footer styles*/
+.card footer {
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0), rgba(0,0,0,0.1));
+    border-radius: 0 0 1.5em 1.5em;
+  }
+
+.card header  {
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0.1), rgba(0,0,0,0));
+    border-radius: 1.5em 1.5em 0 0;
+  }
+
+.card footer, .card header {
+    padding: 1em;
+    height:  3em;
+}
+
+.card footer p {
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+
+/*Main business card contents*/ 
+.card article img {
+    max-height: 100%;
+    float: right;
+}
+
+.card h2, .card p {
+    margin: 0px;
+}
+
+.card h2{
+    font-size: 2em;
+    line-height: 1.5em;
+}
+
+.card article {
+    height: 12em;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.card article p {
+    padding: 10px;
+    color: white;
+}
+  
+
+
+
+
+/*Personal Card*/
+/*Card container styles*/
+.personalcard {
+    width: 35em;
+    height: 22em;
+    margin: 5em auto;
+    background-color: rgb(117, 219, 239);
+    border: 0.2em solid black;
+    border-radius: 1.5em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+/*Header and footer styles*/
+.personalcard footer {
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0), rgba(0,0,0,0.1));
+    border-radius: 0 0 1.5em 1.5em;
+  }
+
+.personalcard header  {
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0.1), rgba(0,0,0,0));
+    border-radius: 1.5em 1.5em 0 0;
+  }
+
+.personalcard footer, .personalcard header {
+    padding: 1em;
+    height:  3em;
+}
+
+.personalcard footer p {
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+
+  /*Main business card contents*/ 
+.personalcard article img {
+    max-height: 100%;
+    float: right;
+}
+.personalcard h2, .personalcard p {
+    margin: 0px;
+}
+
+.personalcard h2{
+    font-size: 2em;
+    line-height: 1.5em;
+}
+
+.personalcard article {
+    height: 12em;
+    background-color: rgba(0, 0, 0);
+}
+
+.personalcard article p {
+    padding: 10px;
+    color: white;
+}
+  
