@@ -1,0 +1,52 @@
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 10px;
+}
+
+.backgroundimg {
+    width: 100em
+}
+
+div {
+    position: absolute;
+    top: 57em;
+    left: 57em;
+    display: inline;
+}
+
+.champ {
+    top: 2em;
+    left: 47em;
+    width: 25em;
+    color: navy;
+    background-color: white;
+    font-size: 1.5em;
+    padding: 0.5rem;
+    display: inline-flex;
+}
+
+.blackteam {
+    background-color:navy;
+    color: white;
+}
+
+.whiteteam {
+    background-color: white;
+    color: navy;
+    left: 35em;
+}
+
+.score {
+    font-weight: bold;
+    font-size: 4rem;
+    margin: 0.1em;
+    padding: 0.1em;
+    display:inline;
+}
+
+.team {
+    font-size:2rem;
+    display: inline;
+    margin: 0.5em;
+    text-align: center;
+}
