@@ -1,5 +1,5 @@
 body {
-	background: radial-gradient(forestgreen, darkgreen);
+	background: radial-gradient(rgb(98, 244, 96), darkgreen);
 	margin: 0 auto;
 	height: 100vh;
 }
