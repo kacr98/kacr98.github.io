@@ -27,7 +27,7 @@
     align-items: center;
     justify-content: center;
     font-size: var(--global--size);
-    background-color: rgba(215, 215, 215, 1);
+    background-color: rgb(247, 190, 190);
     font-family: "Inter", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
