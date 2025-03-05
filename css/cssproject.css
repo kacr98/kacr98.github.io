@@ -1,0 +1,62 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color:antiquewhite;
+    background-color:navy;
+    margin: 1em;
+}
+
+nav {
+    background-color: antiquewhite;
+    color:navy;
+    margin: -1em;
+    padding: 0.7em 2em 0.7em 2em;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav > h2 {
+    text-align: right;
+    font-size: 1.2em;
+}
+
+.concerts {
+    display:grid;
+    grid-template-columns: auto auto;
+    gap: 2em;
+    background-color: navy;
+
+}
+
+div {
+    background-color: antiquewhite;
+    color:navy;
+    padding: 1em;
+    margin: 1em;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+}
+
+.date {
+    text-align: left;
+    font-weight: bold;
+}
+
+h3 {
+    text-align: left;
+    font-weight: bold;
+}
+
+.conductor, .repertoire {
+    border-style: solid;
+    padding: 1em;
+    margin: 0.5em;
+    font-weight: bold;
+    justify-content: center;
+}
