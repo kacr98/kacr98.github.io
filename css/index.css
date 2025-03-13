@@ -41,6 +41,7 @@ div {
 .info {
     display: flex;
     flex-direction: row;
+    
 }
 
 .date {
@@ -63,4 +64,26 @@ h3 {
 
 blockquote {
     font-style: italic;
+}
+
+
+@media screen and (max-width: 400px){
+    .concerts {
+        display:grid;
+        grid-template-columns: auto;
+        gap: 0.5em;
+    }
+
+    body {
+        margin: 0em;
+    }
+
+    nav {
+        margin: 0em 0em 0.5em 0em;
+    }
+
+    div {
+        margin: 0em 0em 0.5em 0em;
+    }
+
 }
