@@ -1,21 +1,28 @@
+.audiowide-regular {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     color:antiquewhite;
-    background-color:navy;
-    margin: 1em;
+    background-color:rgb(244, 0, 134);
+    background-image: url("stars.jpg");
+    background-size: auto;
 }
 
 nav {
-    background-color: antiquewhite;
-    color:navy;
-    margin: -1em;
+    background-color: rgb(244, 0, 134);
+    color:antiquewhite;
+    margin: -0.5em;
     padding: 0.7em 2em 0.7em 2em;
     position: sticky;
     top: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    font-family:"Audiowide";
 }
 
 nav > h2 {
@@ -23,54 +30,123 @@ nav > h2 {
     font-size: 1.2em;
 }
 
-.concerts {
-    display:grid;
-    grid-template-columns: auto auto;
-    gap: 2em;
-    background-color: navy;
-
-}
-
 div {
-    background-color: antiquewhite;
+    /*background-color: antiquewhite;*/
     color:navy;
     padding: 1em;
     margin: 1em;
 }
 
+.WHYWHYWHY {
+    padding: 1em 2em 1em 2em;
+    margin: -1em;
+    background-color: antiquewhite;
+}
+
+.void {
+    font-family: "Audiowide";
+}
+
+.concerts {
+    display:grid;
+    grid-template-columns: auto auto;
+    gap: 2em;
+    /*background-color: navy;*/
+}
+
+
 .info {
     display: flex;
     flex-direction: row;
-    
+    margin: -2em -2em -1em -2em;
 }
 
 .date {
-    text-align: left;
     font-weight: bold;
+}
+
+.place {
+    font-style: italic;
+}
+
+.date, .place {
+    text-align: center;
+    font-family:"Audiowide";
 }
 
 h3 {
     text-align: left;
-    font-weight: bold;
+    font-size: 1.4em;
+    font-family:"Audiowide";
+    color: antiquewhite;
+    text-shadow: 3px 3px 5px rgb(244, 0, 134);
 }
 
 .conductor, .repertoire {
     border-style: solid;
     padding: 1em;
-    margin: 0.5em;
+    margin: 1em;
     font-weight: bold;
     justify-content: center;
+    font-family: "Audiowide";
+    color: rgb(244, 0, 134);
+    border-color: navy;
+}
+
+.conductorName, .repertoireName {
+    font-family: Arial, Helvetica, sans-serif;
+    color: navy;
+    
+}
+
+.songname {
+    color: rgb(244, 0, 134);
+    font-weight: bold;
 }
 
 blockquote {
     font-style: italic;
+    background-color: rgba(244, 0, 134, 0.15);
+    padding: 0.3em;
+    margin: 0em;
+    border-left: 3px solid navy;
+}
+
+#top {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  #top:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
+
+footer {
+    background-color: rgb(244, 0, 134);
+    color:antiquewhite;
+    margin: -0.5em;
+    padding: 1em;
+    font-weight: bold;
+    text-align: center;
+    font-family:"Audiowide";
+
 }
 
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 1050px){
     .concerts {
         display:grid;
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
         gap: 0.5em;
     }
 
@@ -86,4 +162,19 @@ blockquote {
         margin: 0em 0em 0.5em 0em;
     }
 
+}
+
+@media screen and (max-width: 550px) {
+    .info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav {
+        margin: -2em;
+    }
+
+    .h3 {
+        font-size: 1em;
+    }
 }
