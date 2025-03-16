@@ -10,12 +10,12 @@ body {
     background-color:rgb(244, 0, 134);
     background-image: url("stars.jpg");
     background-size: auto;
+    margin: 0em;
 }
 
 nav {
     background-color: rgb(244, 0, 134);
     color:antiquewhite;
-    margin: -0.5em;
     padding: 0.5em 1.7em 0.5em 1.7em;
     position: sticky;
     top: 0;
@@ -26,8 +26,9 @@ nav {
 }
 
 nav > h2 {
-    text-align: right;
     font-size: 1.2em;
+    margin: auto 0.3em auto auto;
+    text-align: right;
 }
 
 div {
@@ -39,7 +40,7 @@ div {
 
 .WHYWHYWHY {
     padding: 1em 2em 1em 2em;
-    margin: -1em;
+    margin: -1em 0em 0em 0em;
     background-color: antiquewhite;
 }
 
@@ -111,29 +112,10 @@ blockquote {
     border-left: 3px solid navy;
 }
 
-#top {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
-    right: 30px; /* Place the button 30px from the right */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color: red; /* Set a background color */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
-  }
-  
-  #top:hover {
-    background-color: #555; /* Add a dark-grey background on hover */
-  }
-
 footer {
     background-color: rgb(244, 0, 134);
     color:antiquewhite;
-    margin: -0.5em;
+    margin: 0em;
     padding: 1em;
     font-weight: bold;
     text-align: center;
@@ -154,7 +136,7 @@ footer {
     }
 
     nav {
-        margin: 0em 0em 0.5em 0em;
+        margin: auto;
     }
 
     div {
@@ -169,16 +151,13 @@ footer {
         flex-direction: column;
     }
 
-    .nav {
-        margin: -2em;
-    }
-
     .h3 {
         font-size: 0.8em;
     }
 
     nav > h2 {
         text-align: right;
-        font-size: 0.7em;
+        font-size: 1em;
+        margin: auto;
     }
 }
