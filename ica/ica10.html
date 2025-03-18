@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICA10</title>
+</head>
+<body>
+    <h1 class="name">Hi.</h1>
+    <button class="pickup">Click Me</button>
+    <div id="cat1"> <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F008%2F846%2F791%2Fnon_2x%2Fcat-face-cute-free-download-transparent-image-illustration-clipart-pet-wildlife-free-png.png&f=1&nofb=1&ipt=a3c937b3ea1cee65306fbc90724979547413a1c44a4a50c711306b2ef1d518bd&ipo=images" alt="cat head" width="300"> </div>
+
+<script>
+    let pbutton = document.querySelector('.pickup');
+    pbutton.addEventListener('click', beRude);
+
+    function beRude() {
+        let name = document.querySelector('.name');
+        const line = prompt('Enter Your Best Pickup Line');
+        const rude = ("??? that was absolutly horrible.?? what are you doing.. what a horrible misuse of the english language!!! NASTY! miserbale. try again. or rotate the cat. go on. rotate it. you know you want to. ROTATE THE CAT");
+        name.textContent = line;
+        pbutton.textContent = rude;
+    }
+
+    cat1.addEventListener('click', whee);
+
+    function whee() {
+        cat1.style.transform = 'rotate(180deg)';
+    }
+
+</script>
+</body>
+</html>
