@@ -1,14 +1,20 @@
 const quotebut = document.querySelector('#js-new-quote').addEventListener('click', getQuote);
-var endpoint = "https://supernatural-quotes-api.cyclic.app/quote/random";
+var endpoint = "https://supernatural-quotes-api.onrender.com/quote/random";
 
 let current = {
-    question: "",
-    answer: ""
+    quote: "",
+    name: ""
 }
 
 async function getQuote() {
     try {
-        const response = await fetch(endpoint);
+        const response = await fetch("https://supernatural-api.onrender.com/quotes/random")
+        .then(res => res.json())
+        .then(data => console.log(data));
+        
+        
+        const namequote = json.parse('{"name":"", "quote":""}');
+        document.getElementById('#js-quote-text').innerHTML = namequote.name;
 
         if (!response.ok) {
             throw Error(response.statusText);
@@ -16,8 +22,8 @@ async function getQuote() {
 
         const json = await response.json();
         console.log(json);
-        displayQuote(json.question);
-        var answerbtn = document.querySelector('#js-tweet').addEventListener('click', () => displayAnswer(json.answer));
+        displayQuote(json.quote);
+        var namebtn = document.querySelector('#js-tweet').addEventListener('click', () => displayName(json.name));
 
 
         } catch(err) {
@@ -34,14 +40,14 @@ async function getQuote() {
 
     }
 
-    function displayAnswer(answer){
-        const answerText = document.querySelector('#js-answer-text');
-        answerText.textContent = answer;
+    function displayName(name){
+        const nameText = document.querySelector('#js-answer-text');
+        nameText.textContent = name;
     }
 
     getQuote();
 
     function refresh(){
-        const answerText = document.querySelector('#js-answer-text');
-        answerText.textContent = "";
+        const nameText = document.querySelector('#js-answer-text');
+        nameText.textContent = "";
     }
