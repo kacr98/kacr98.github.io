@@ -1,20 +1,14 @@
 const quotebut = document.querySelector('#js-new-quote').addEventListener('click', getQuote);
-var endpoint = "https://supernatural-quotes-api.onrender.com/quote/random";
+var endpoint = "https://kimiquotes.pages.dev/api/quote";
 
 let current = {
     quote: "",
-    name: ""
+    year: ""
 }
 
 async function getQuote() {
     try {
-        const response = await fetch("https://supernatural-api.onrender.com/quotes/random")
-        .then(res => res.json())
-        .then(data => console.log(data));
-        
-        
-        const namequote = json.parse('{"name":"", "quote":""}');
-        document.getElementById('#js-quote-text').innerHTML = namequote.name;
+        const response = await fetch(endpoint);
 
         if (!response.ok) {
             throw Error(response.statusText);
@@ -23,7 +17,7 @@ async function getQuote() {
         const json = await response.json();
         console.log(json);
         displayQuote(json.quote);
-        var namebtn = document.querySelector('#js-tweet').addEventListener('click', () => displayName(json.name));
+        var answerbtn = document.querySelector('#js-tweet').addEventListener('click', () => displayYear(json.year));
 
 
         } catch(err) {
@@ -40,14 +34,14 @@ async function getQuote() {
 
     }
 
-    function displayName(name){
-        const nameText = document.querySelector('#js-answer-text');
-        nameText.textContent = name;
+    function displayYear(year){
+        const yearText = document.querySelector('#js-answer-text');
+        yearText.textContent = year;
     }
 
     getQuote();
 
     function refresh(){
-        const nameText = document.querySelector('#js-answer-text');
-        nameText.textContent = "";
+        const yearText = document.querySelector('#js-answer-text');
+        yearText.textContent = "";
     }
