@@ -26,7 +26,7 @@ async function getQuote() {
         }
     }
 
-    function displayQuote(quote) {
+    async function displayQuote(quote) {
         const quoteText = document.querySelector('#js-quote-text');
         
         quoteText.textContent = quote;
@@ -34,7 +34,7 @@ async function getQuote() {
 
     }
 
-    function displayYear(year){
+    async function displayYear(year){
         const yearText = document.querySelector('#js-answer-text');
         yearText.textContent = year;
     }
