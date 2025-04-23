@@ -1,5 +1,5 @@
 const quotebut = document.querySelector('#js-new-quote').addEventListener('click', getQuote);
-var endpoint = "https://kimiquotes.pages.dev/api/quote";
+var endpoint = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
 
 let current = {
     quote: "",
@@ -16,9 +16,9 @@ async function getQuote() {
 
         const json = await response.json();
         console.log(json);
-        displayQuote(json.quote);
-        var answerbtn = document.querySelector('#js-tweet').addEventListener('click', () => displayYear(json.year));
-
+        
+        displayQuote(json);
+        changePhoto();
 
         } catch(err) {
             console.log(err);
@@ -26,22 +26,23 @@ async function getQuote() {
         }
     }
 
-    async function displayQuote(quote) {
-        const quoteText = document.querySelector('#js-quote-text');
-        
-        quoteText.textContent = quote;
-        refresh();
+    ronPhotos = ['ron1.png', 'ron2.jpg', 'ron3.jpg'];
 
+    async function changePhoto(){
+      const photo = document.getElementById('ron');
+      const randomIndex = Math.floor(Math.random() * ronPhotos.length);
+      photo.src = ronPhotos[randomIndex];
     }
 
-    async function displayYear(year){
-        const yearText = document.querySelector('#js-answer-text');
-        yearText.textContent = year;
+    async function displayQuote(json) {
+        const quoteText = document.querySelector('#js-quote-text');
+        quoteText.textContent = json;
+
+        refresh();
+
     }
 
     getQuote();
 
     function refresh(){
-        const yearText = document.querySelector('#js-answer-text');
-        yearText.textContent = "";
     }
