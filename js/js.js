@@ -1,4 +1,4 @@
-alert("Entering your phone number sucks. Hopefully this is more entertaining for you!\n\nUse the pause and play button to enter your phone number whenever you feel like it.");
+//alert("Entering your phone number sucks. Hopefully this is more entertaining for you!\n\nUse the pause and play button to enter your phone number whenever you feel like it.");
 
 var video = document.getElementById("video");
 
@@ -23,11 +23,15 @@ function pausePlay() {
    
     if (digit < 11){
         if (video.paused) {
+            if (digit = 1){
+                heading.innerHTML = "";
+            }
             video.play();
             btn.innerHTML = "Pause";
         } else {
             video.pause();
             btn.innerHTML = "Play";
+
 
             // prompt user 
             let currentDigit = window.prompt("Please enter digit number " + digit + " of your phone number.", "");
