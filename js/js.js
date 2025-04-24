@@ -1,4 +1,4 @@
-//alert("Entering your phone number sucks. Hopefully this is more entertaining for you!\n\nUse the pause and play button to enter your phone number whenever you feel like it.");
+alert("Entering your phone number sucks. Hopefully this is more entertaining for you!\n\nUse the pause and play button to enter your phone number whenever you feel like it.");
 
 var video = document.getElementById("video");
 
