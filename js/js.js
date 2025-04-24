@@ -1,50 +1,65 @@
-alert("This is a test of Cloudfare's DDOS system.\nPress OK to consent to testing.");
+//alert("Entering your phone number sucks. Hopefully this is more entertaining for you!\n\nUse the pause and play button to enter your phone number whenever you feel like it.");
 
 var video = document.getElementById("video");
 
-const pauseWhen = ["3", "10", "16", "20", "21", "25", "32", "33", "40"];
-
-async function goThroughArray(array) {
-    for (const time of array){
-        if (video.currentTime >= array.time){
-            await getNumber();
-        }
-    }
-    console.log(array.time);
-}
-
-async function getNumber(){
-    video.pause();
-     // BUFFER ANIMATION
-        // ALERT enter pausewhen.time - 1 digit
-    window.prompt("Please enter digit" + array.time, "");
-        // hide buffer
-    video.play();
-}
-
-
-//for (let i = 0; i < pauseWhen.length; i++) {
-    //console.log(pauseWhen[i]);
-    //if (video.currentTime >= pauseWhen[i]){
-        //video.pause();
-        // BUFFER ANIMATION
-        // ALERT enter pausewhen.time - 1 digit
-        //window.prompt("Please enter digit" + pauseWhen.time, "");
-        // hide buffer
-        //video.play();}}
 
 // Get the button
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("btn");
 
-// Pause and play the video, and change the button text
-function pausePlay() {
-  if (video.paused) {
-    video.play();
-    btn.innerHTML = "Pause";
-  } else {
-    video.pause();
-    btn.innerHTML = "Play";
-  }
+// digit to enter
+var digit = 1;
+let number = "";
+let heading = document.getElementById("heading");
+
+// my workaround for the fact that videos must be automuted on websites
+if (digit = 1){
+    let vid = document.getElementById("video");
+    console.log("its working")
+    vid.muted = false;
 }
 
-goThroughArray(pauseWhen);
+// Pause and play the video
+function pausePlay() {
+   
+    if (digit < 11){
+        if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause";
+        } else {
+            video.pause();
+            btn.innerHTML = "Play";
+
+            // prompt user 
+            let currentDigit = window.prompt("Please enter digit number " + digit + " of your phone number.", "");
+            if (currentDigit == 1 || currentDigit == 2 || currentDigit == 3 || currentDigit == 4 || currentDigit == 5 
+            || currentDigit == 6 || currentDigit == 7 || currentDigit == 8 || currentDigit == 9 || currentDigit == 0) {
+                
+
+                // update number to add next digit
+                let digitString = currentDigit.toString();
+
+                if (digit == 4 || digit == 7){
+                    number = number.concat("-");
+                    number = number.concat(digitString);
+                    heading.innerHTML = number;
+                } else {
+                    number = number.concat(digitString);
+                    heading.innerHTML = number;
+                }
+
+                digit += 1;
+
+            } else{
+                alert("you.. you didn't enter a single digit nuwmber. why not?\n\nyouw're huwrting my feewlings.\n\nTRY AGAIN.");
+            }
+            
+
+            btn.innerHTML = "Pause";
+            video.play();
+        }       
+    }
+    else {
+        btn.innerHTML = "Successfully entered! Enjoy the song!";
+    }
+}
+
