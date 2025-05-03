@@ -22,10 +22,11 @@ body{
   .content {
     position: fixed;
     bottom: 0;
+    left: 0;
     background: rgba(0, 0, 0, 0.5);
     color: #f1f1f1;
     width: 100%;
-    padding: 18px;
+    padding: 12px 26px 12px 26px;
 
   }
 
@@ -42,6 +43,7 @@ body{
     background: #ffffff;
     color: #000000;
     cursor: pointer;
+    margin: 0px 0px 12px 0px;
   }
   
   #btn:hover {
