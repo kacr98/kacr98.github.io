@@ -90,21 +90,21 @@ if (digit <= 10){
             video.play();
 
         } else{
+            // if a valid single integer wasn't entered
             i -= 1;
             stopAtThisTimeNow = timesToStopAt[i];
             console.log(stopAtThisTimeNow);
             alert("you.. you didn't enter a single digit nuwmber. why not?\n\nyouw're huwrting my feewlings.\n\nTRY AGAIN.");
             video.play();
-
         }
     }
-    });}
+    });} // <-- wow that looks NASTY
 
 
 // button that starts the song
 function playVid(){
         if (digit = 1){
-            heading.innerHTML = "The music will pause randomly to let you enter a digit of your phonr number!";
+            heading.innerHTML = "The music will pause randomly to let you enter a digit of your phone number!";
         }
         btn.style.display = "none";
         video.play();
